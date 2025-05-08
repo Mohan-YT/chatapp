@@ -1,0 +1,24 @@
+<-- BACKEND -->
+ npm init -y
+ npm i express mongoose dotenv jsonwebtoken bcryptjs cookie-parser cloudinary socket.io
+ npm i nodemon -D
+ npm i cors
+
+
+ <-- FRONTEND -->
+ npm create vite@latest .
+ npm i react-router-dom react-hot-toast
+ npm install tailwindcss @tailwindcss/vite
+ npm i -D daisyui@latest
+ npm i axios zustand
+ npm i react-icons
+ npm install browser-image-compression
+
+
+ <-- ROOT -->
+            // build : for install all dependencies of backend and frontend
+            //start : for start the server 
+  "scripts": {
+    "build" : "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
