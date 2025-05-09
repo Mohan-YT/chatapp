@@ -89,8 +89,8 @@ const Messageinput = () => {
         </div>
       )}
       
-      <form onSubmit={handleSendMessage} className='flex items-center gap-2'>
-          <div className="flex-1 flex gap-2">
+      <form onSubmit={handleSendMessage} className='flex items-center gap-1'>
+          <div className="flex-1 flex gap-1">
               <input type="text"
                      className='w-full input input-bordered rounded-lg input-sm sm:input-md'
                      placeholder='Type a message...'
@@ -104,7 +104,7 @@ const Messageinput = () => {
                      onChange={hanldeimageChange} 
               />
               <button type='button'
-                      className={`hidden sm:flex btn btn-circle ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
+                      className={`flex btn btn-sm btn-circle ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
                       onClick={()=>fileInputRef.current?.click()}
               >
                   <FaRegImage size={20} />

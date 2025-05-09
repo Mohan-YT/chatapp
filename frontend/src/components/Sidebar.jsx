@@ -18,7 +18,15 @@ const Sidebar = () => {
     getUsers();
   }, [getUsers]);
 
-  if (isUsersLoading) return <SidebarSkeleton />;
+  if (isUsersLoading) return( 
+    <div className="flex flex-col">
+      <div className="border-b border-base-300 w-full p-5">
+          <FaUser className="size-6" />
+      </div>
+        <SidebarSkeleton />
+    </div>
+      
+  );
 
   return (
     <aside className="h-full w-20 lg:w-72 border-r border-base-300 flex flex-col transition-all duration-200">
